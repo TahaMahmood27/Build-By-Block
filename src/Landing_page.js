@@ -1,8 +1,9 @@
 const Landing_page = () {
     
     return(
-        <div>
-        </div>
+    <div>
+    <div className="header "></div>
+    </div>
     );
 };
 
