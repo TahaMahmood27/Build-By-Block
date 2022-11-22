@@ -1,9 +1,9 @@
 import "./App.css";
-import
+import Landing_page from "./Landing_page";
 function App() {
   return (
     <div>
-      <h1>taha</h1>
+      <Landing_page></Landing_page>
     </div>
   );
 }
