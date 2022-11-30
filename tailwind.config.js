@@ -12,7 +12,7 @@ module.exports = {
       colors: {
         txt_1: "black",
         bg_1: "#3E3C3C",
-        background_2: "#1a1a21",
+        background_2: "#110D0F",
         purple: "#EE69AC",
         white: "#F9F9F9",
         brightRed: "hsl(12, 88%, 59%)",

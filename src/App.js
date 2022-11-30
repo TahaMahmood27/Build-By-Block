@@ -3,7 +3,7 @@ import Landing_page from "./Landing_page";
 function App() {
   return (
     <div>
-      <Landing_page></Landing_page>
+      <Landing_page />
     </div>
   );
 }
