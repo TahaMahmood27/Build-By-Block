@@ -38,9 +38,11 @@ const Landing_page = () => {
               the week.
             </div>
             <div className="button text-white">
-              <button className="border-2 border-white rounded-xl pt-1 p-2 text-3xl">
-                Sign Up
-              </button>
+              <a href="./Registration_Page">
+                <button className="border-2 border-white rounded-xl pt-1 p-2 text-3xl">
+                  Sign Up
+                </button>
+              </a>
               <button className="border-2 border-white mx-1 rounded-xl pt-1 p-2 text-3xl">
                 Sign In
               </button>
