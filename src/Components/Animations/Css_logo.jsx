@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Lottie from "react-lottie";
-import animationData from "../../CSS.json";
+import animationData from "../../Animation_Json/CSS.json";
 class Css_logo extends Component {
   render() {
     const defaultOptions = {

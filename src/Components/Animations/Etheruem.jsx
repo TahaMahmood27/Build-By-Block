@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Lottie from "react-lottie";
-import animationData from "../../etheruem.json";
+import animationData from "../../Animation_Json/etheruem.json";
 class Etheruem extends Component {
   render() {
     const defaultOptions = {

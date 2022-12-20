@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Lottie from "react-lottie";
-import animationData from "../../email.json";
+import animationData from "../../Animation_Json/email.json";
 class Email extends Component {
   render() {
     const defaultOptions = {

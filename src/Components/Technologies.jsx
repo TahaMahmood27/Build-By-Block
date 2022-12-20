@@ -11,18 +11,18 @@ const Technologies = () => {
         Technologies Used
       </div>
       <div className="grid grid-cols-4 ">
-        <div className="border">
+        <div className="">
           <div className="h-auto">
             <Html5 />
           </div>
         </div>
-        <div className="border">
+        <div className="">
           <Etheruem />
         </div>
-        <div className="border">
+        <div className="">
           <React_logo />
         </div>
-        <div className="border">
+        <div className="">
           <Css_logo />
         </div>
       </div>

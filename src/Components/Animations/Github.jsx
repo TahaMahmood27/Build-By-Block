@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Lottie from "react-lottie";
-import animationData from "../../github.json";
+import animationData from "../../Animation_Json/github.json";
 class Github extends Component {
   render() {
     const defaultOptions = {

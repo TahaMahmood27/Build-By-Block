@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Lottie from "react-lottie";
-import animationData from "../../html5.json";
+import animationData from "../../Animation_Json/html5.json";
 class Html5 extends Component {
   render() {
     const defaultOptions = {

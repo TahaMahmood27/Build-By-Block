@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Lottie from "react-lottie";
-import animationData from "../../twitter.json";
+import animationData from "../../Animation_Json/twitter.json";
 class Twitter extends Component {
   render() {
     const defaultOptions = {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Lottie from "react-lottie";
-import animationData from "../../working_man_animation.json";
+import animationData from "../../Animation_Json/working_man_animation.json";
 class AnimationPage extends Component {
   render() {
     const defaultOptions = {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Lottie from "react-lottie";
-import animationData from "../../React.json";
+import animationData from "../../Animation_Json/React.json";
 class React_logo extends Component {
   render() {
     const defaultOptions = {
