@@ -36,7 +36,7 @@ const Blogpage = () => {
                 />
               </div>
 
-              <div className="border-blue pl-2">
+              <div className=" pl-2">
                 <div className="">Taha Mahmood</div>
                 <div className="text-xs font-light text-black-500">CEO</div>
               </div>
