@@ -7,7 +7,7 @@ const Blogpage = () => {
   return (
     <div className="bg-[#E6E7ED]">
       <Header />
-      <div className="mx-[5%] mt-[50px]">
+      <div className="mx-[5%] ">
         <div className="Main Heading and Search grid grid-cols-10">
           <div className="Heading col-span-8 text-3xl font-bold">
             Latest Blogs and News
@@ -48,6 +48,7 @@ const Blogpage = () => {
           </div>
         </div>
       </div>
+
       <>
         <Footer />
       </>

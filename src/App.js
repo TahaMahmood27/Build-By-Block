@@ -1,5 +1,5 @@
 import "./App.css";
-import Blogpage from "./Blogpage";
+import BlogLandingPage from "./BlogLandingPage";
 import Landing_page from "./Landing_page";
 import Registration_Page from "./Registration_Page";
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div>
       {/* <Landing_page /> */}
       {/* <Registration_Page /> */}
-      <Blogpage />
+      <BlogLandingPage />
     </div>
   );
 }
