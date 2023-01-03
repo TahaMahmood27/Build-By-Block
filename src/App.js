@@ -9,8 +9,8 @@ function App() {
     <div>
       {/* <Landing_page /> */}
       {/* <Registration_Page /> */}
-      {/* <BlogLandingPage /> */}
-      <BlogPage />
+      <BlogLandingPage />
+      {/* <BlogPage /> */}
     </div>
   );
 }
