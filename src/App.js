@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       {/* <Landing_page /> */}
-      {/* <Registration_Page /> */}
+      <Registration_Page />
       <BlogLandingPage />
       {/* <BlogPage /> */}
     </div>
