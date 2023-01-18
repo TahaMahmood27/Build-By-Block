@@ -8,22 +8,22 @@ const Join_the_community = () => {
       <div className="text-[#A5AAB9] text-center pl-3 text-5xl mt-24">
         Join The Community
       </div>
-      <div className="flex justify-center text-white">
-        <div className="Github pl-[300px]">
-          <div className="pl-[3rem] text-xl">Github</div>
-          <div className="pt-12">
+      <div className="flex justify-center text-white text-2xl">
+        <div className="Github">
+          <div className="text-center text-2xl">Github</div>
+          <div className="">
             <Github />
           </div>
         </div>
-        <div className="Email absolute pl-[200px]">
-          <div className="pl-[7rem] text-xl">Email</div>
+        <div className="Email">
+          <div className="text-center">Email</div>
           <div>
             <Email />
           </div>
         </div>
         <div className="Twitter">
-          <div>Twitter</div>
-          <div>
+          <div className="text-center">Twitter</div>
+          <div className="overflow-hidden">
             <Twitter />
           </div>
         </div>
