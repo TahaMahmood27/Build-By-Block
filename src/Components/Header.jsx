@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 const Header = () => {
   return (
     <div className="sticky top-0 z-10">
@@ -8,7 +8,17 @@ const Header = () => {
           <div className="text-xs mt-1 ml-2">Hi Taha</div>
           <div className="text-md ml-2">Welcome Back,</div>
         </div>
-        <div className="Account_id  col-span-3"></div>
+        <div className="Dropdown  col-span-3 relative">
+          <div className="">
+            <button>Logo</button>
+            <div className="absolute bg-[#E6E7ED] rounded-md	shadow-lg shadow-white	">
+              <div className="shadow-lg shadow-white ">Signout</div>
+              <div className="">Sign In</div>
+              <div className="">My Account</div>
+              <div className="">BlockChain Identification</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

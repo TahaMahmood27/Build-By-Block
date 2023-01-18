@@ -7,9 +7,9 @@ import BlogPage from "./BlogPage";
 function App() {
   return (
     <div>
-      <Landing_page />
+      {/* <Landing_page /> */}
       {/* <Registration_Page /> */}
-      {/* <BlogLandingPage /> */}
+      <BlogLandingPage />
       {/* <BlogPage /> */}
     </div>
   );
