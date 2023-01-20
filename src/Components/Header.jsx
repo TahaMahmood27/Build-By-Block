@@ -1,5 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
+import Dropdown from "./Dropdown";
 const Header = () => {
+  var x = false;
+  const preventhanlder = (event) => {
+    event.preventDefault();
+    if (x === false) {
+      x = true;
+    } else {
+      x = false;
+      return x;
+    }
+  };
+  console.log(x);
   return (
     <div className="sticky top-0 z-10">
       <div className="  w-[100%] z-10 bg-white grid grid-cols-10 h-[50px] ">
@@ -10,13 +22,8 @@ const Header = () => {
         </div>
         <div className="Dropdown  col-span-3 relative">
           <div className="">
-            <button>Logo</button>
-            <div className="absolute bg-[#E6E7ED] rounded-md	shadow-lg shadow-white	">
-              <div className="shadow-lg shadow-white ">Signout</div>
-              <div className="">Sign In</div>
-              <div className="">My Account</div>
-              <div className="">BlockChain Identification</div>
-            </div>
+            <button onClick={preventhanlder}>Logo</button>
+            {x && <Dropdown />}
           </div>
         </div>
       </div>
