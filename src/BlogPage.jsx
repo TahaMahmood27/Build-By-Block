@@ -2,6 +2,16 @@ import React from "react";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 const BlogPage = () => {
+  var x;
+  function fetchdata() {
+    fetch("http://127.0.0.1:8001/api/Blog/")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      });
+  }
   return (
     <div>
       <Header />
