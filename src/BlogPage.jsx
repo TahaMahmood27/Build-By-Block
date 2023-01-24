@@ -1,20 +1,7 @@
 import React from "react";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import { useEffect } from "react";
 const BlogPage = () => {
-  useEffect(() => {
-    fetchdata();
-  }, []);
-  function fetchdata() {
-    fetch("http://127.0.0.1:8003/api/Blog/")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-      });
-  }
   return (
     <div>
       <Header />

@@ -3,8 +3,29 @@ import BlockChain from "./Components/Animations/BlockChain";
 import Blog_display from "./Components/Blog_display";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
+import { useEffect } from "react";
 
 const Blogpage = () => {
+  useEffect(() => {
+    fetchdata();
+  }, []);
+  function fetchdata() {
+    fetch("http://127.0.0.1:8000/api/Blog/")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const blogdata = data.map((data_x) => {
+          return {
+            id: data_x.id,
+            title: data_x.topic_Heading,
+            description: data_x.description,
+          };
+        });
+        console.log(blogdata);
+      });
+  }
+
   return (
     <div className="bg-[#E6E7ED]">
       <Header />

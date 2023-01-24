@@ -10,10 +10,10 @@ const Blog_display = () => {
           alt="blog_picture"
         />
       </div>
-      <div className="flex align-middle">
-        <div className="text-center">Heading</div>
-        <div className="align-middle">Brief Description</div>
-        <div className="align-middle">Brief Content</div>
+      <div className="flex flex-col items-center">
+        <div>Heading</div>
+        <div>Brief Description</div>
+        <div>Brief Content</div>
       </div>
     </div>
   );
