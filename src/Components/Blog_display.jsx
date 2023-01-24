@@ -1,6 +1,6 @@
 import React from "react";
 
-const Blog_display = () => {
+const Blog_display = (props) => {
   return (
     <div className="flex justify-start mt-6">
       <div className="">
@@ -11,9 +11,8 @@ const Blog_display = () => {
         />
       </div>
       <div className="flex flex-col items-center">
-        <div>Heading</div>
-        <div>Brief Description</div>
-        <div>Brief Content</div>
+        <div>{props.xy.title}</div>
+        <div>{props.xy.description.substring(0, 100)}</div>
       </div>
     </div>
   );

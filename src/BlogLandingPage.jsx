@@ -4,8 +4,17 @@ import Blog_display from "./Components/Blog_display";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import { useEffect } from "react";
+import { useState } from "react";
 
 const Blogpage = () => {
+  const [blogdatax, setblogdatax] = useState([
+    {
+      id: null,
+      title: "",
+      description: "",
+    },
+  ]);
+
   useEffect(() => {
     fetchdata();
   }, []);
@@ -22,7 +31,8 @@ const Blogpage = () => {
             description: data_x.description,
           };
         });
-        console.log(blogdata);
+        setblogdatax(blogdata);
+        // console.log(blogdatax[0].title);
       });
   }
 
@@ -65,7 +75,9 @@ const Blogpage = () => {
         </div>
 
         <div>
-          <Blog_display />
+          {blogdatax.map((zy) => (
+            <Blog_display xy={zy} key={zy.id} />
+          ))}
         </div>
       </div>
 
