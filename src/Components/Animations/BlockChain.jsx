@@ -11,7 +11,7 @@ class BlockChain extends Component {
     };
     return (
       <div>
-        <Lottie options={defaultOptions} height={300} width={500} />
+        <Lottie options={defaultOptions} height={400} width={700} />
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import BlockChain from "./Components/Animations/BlockChain";
+import Blog_display from "./Components/Blog_display";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 
@@ -15,43 +16,41 @@ const Blogpage = () => {
           <input
             type="text"
             placeholder="Search.."
-            className="Search_bar col-span-2 rounded-md pl-4"
+            className="Search_bar col-span-2 rounded-md pl-4 mt-1"
           ></input>
         </div>
-        <div className="Main_Section grid grid-cols-11 mt-12">
-          <div className="col-span-5">
-            <BlockChain />
-            <div className="text-3xl font-semibold">Build By Block</div>
-            <div className="">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequatur obcaecati rerum porro nemo non? Odio possimus fugit
-              facere sunt eum provident consequatur
+        <div className="Main_Section  mt-4">
+          <BlockChain />
+          <div className="text-3xl font-semibold">Build By Block</div>
+          <div className="">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+            obcaecati rerum porro nemo non? Odio possimus fugit facere sunt eum
+            provident consequatur
+          </div>
+          <div className="flex justify-start h-auto">
+            <div className="pt-[10px]">
+              <img
+                className="w-[40px] h-[40px] rounded-full "
+                src="./ceo.jpeg"
+                alt="ceo_picture"
+              />
             </div>
-            <div className="flex justify-start h-auto">
-              <div className="pt-[10px]">
-                <img
-                  className="w-[40px] h-[40px] rounded-full "
-                  src="./ceo.jpeg"
-                  alt="ceo_picture"
-                />
-              </div>
 
-              <div className=" pl-2">
-                <div className="">Taha Mahmood</div>
-                <div className="text-xs font-light text-black-500">CEO</div>
-              </div>
+            <div className=" pl-2">
+              <div className="">Taha Mahmood</div>
+              <div className="text-xs font-light text-black-500">CEO</div>
             </div>
           </div>
-          <div className="col-span-1"></div>
-          <div className="col-span-5">
-            <img className="rounded-lg" src="ad.png" alt="" />
-          </div>
+        </div>
+
+        <div>
+          <Blog_display />
         </div>
       </div>
 
-      <>
+      <div className="footer">
         <Footer />
-      </>
+      </div>
     </div>
   );
 };
