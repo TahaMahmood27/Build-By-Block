@@ -54,9 +54,11 @@ const Blogpage = () => {
           <BlockChain />
           <div className="text-3xl font-semibold">Build By Block</div>
           <div className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-            obcaecati rerum porro nemo non? Odio possimus fugit facere sunt eum
-            provident consequatur
+            Build By Block is used to eliminate the problem of fraudulent
+            documents using blockchain. It is a web based solution where users
+            can upload their documents and their documents are verified and put
+            on BlockChain. This Web-App also provides the facilty of blogging
+            and news for convienence of users.
           </div>
           <div className="flex justify-start h-auto">
             <div className="pt-[10px]">
@@ -74,10 +76,12 @@ const Blogpage = () => {
           </div>
         </div>
 
-        <div>
-          {blogdatax.map((zy) => (
-            <Blog_display xy={zy} key={zy.id} />
-          ))}
+        <div className="grid grid-cols-10">
+          <div className="col-span-8">
+            {blogdatax.map((zy) => (
+              <Blog_display xy={zy} key={zy.id} />
+            ))}
+          </div>
         </div>
       </div>
 

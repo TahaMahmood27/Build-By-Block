@@ -3,16 +3,16 @@ import React from "react";
 const Blog_display = (props) => {
   return (
     <div className="flex justify-start mt-6">
-      <div className="">
-        <img
-          className="h-[250px] rounded-xl "
-          src="./blog.jpeg"
-          alt="blog_picture"
-        />
-      </div>
-      <div className="flex flex-col items-center">
-        <div>{props.xy.title}</div>
-        <div>{props.xy.description.substring(0, 100)}</div>
+      <img
+        className="h-[250px] rounded-xl "
+        src="./blog.jpeg"
+        alt="blog_picture"
+      />
+      <div className="inline-flex items-center">
+        <div className="items-center">
+          <div className="text-4xl">{props.xy.title}</div>
+          <div className="">{props.xy.description.substring(0, 500)}</div>
+        </div>
       </div>
     </div>
   );
