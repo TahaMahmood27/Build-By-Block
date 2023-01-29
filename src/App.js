@@ -5,6 +5,7 @@ import Registration_Page from "./Registration_Page";
 import BlogPage from "./BlogPage";
 import { Route, Routes } from "react-router-dom";
 import AddBlog from "./Components/AddBlog";
+import { Not_found } from "./Components/Not_found";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="BlogPage" element={<BlogPage />}></Route>
           <Route path="AddBlog" element={<AddBlog />}></Route>
         </Route>
+        <Route path="*" element={<Not_found />}></Route>
       </Routes>
     </div>
   );
