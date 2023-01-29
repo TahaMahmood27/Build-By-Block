@@ -1,8 +1,8 @@
 import "./App.css";
-import BlogLandingPage from "./BlogLandingPage";
-import Landing_page from "./Landing_page";
-import Registration_Page from "./Registration_Page";
-import BlogPage from "./BlogPage";
+import BlogLandingPage from "./Pages/BlogLandingPage";
+import Landing_page from "./Pages/Landing_page";
+import Registration_Page from "./Pages/Registration_Page";
+import BlogPage from "./Pages/BlogPage";
 import { Route, Routes } from "react-router-dom";
 import AddBlog from "./Components/AddBlog";
 import { Not_found } from "./Components/Not_found";

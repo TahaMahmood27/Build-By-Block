@@ -1,6 +1,6 @@
 import React from "react";
-import "./Animation.css";
-const Landing_page = () => {
+import "./LandingPageAnimation.css";
+const LandingPageAnimation = () => {
   return (
     <div className="container">
       <svg
@@ -6552,4 +6552,4 @@ const Landing_page = () => {
   );
 };
 
-export default Landing_page;
+export default LandingPageAnimation;

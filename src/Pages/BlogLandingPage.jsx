@@ -1,8 +1,8 @@
 import React from "react";
-import BlockChain from "./Components/Animations/BlockChain";
-import Blog_display from "./Components/Blog_display";
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
+import BlockChain from "../Components/Animations/BlockChain";
+import Blog_display from "../Components/Blog_display";
+import Footer from "../Components/Footer";
+import Header from "../Components/Header";
 import { useEffect } from "react";
 import { useState } from "react";
 

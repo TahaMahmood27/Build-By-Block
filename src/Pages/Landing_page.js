@@ -1,8 +1,8 @@
 import React from "react";
-import Animation from "./Components/Animations/Animation.js";
-import Join_the_community from "./Components/Join_the_community.jsx";
-import Problem_Statement from "./Components/Problem_Statement";
-import Technologies from "./Components/Technologies.jsx";
+import Join_the_community from "../Components/Join_the_community.jsx";
+import Problem_Statement from "../Components/Problem_Statement";
+import Technologies from "../Components/Technologies.jsx";
+import LandingPageAnimation from "../Components/Animations/LandingPageAnimation.js";
 const Landing_page = () => {
   return (
     <div className="bg-background_2 scrollbar scrollbar-thumb-black scrollbar-track-white">
@@ -53,7 +53,7 @@ const Landing_page = () => {
           </div>
           <div className="Right_Part">
             <div className="relative w-[700px] -top-[30px]">
-              <Animation />
+              <LandingPageAnimation />
             </div>
           </div>
         </div>

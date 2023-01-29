@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
-import { useState } from "react";
-import Sign_up from "./Components/Sign_up";
+import React, { useEffect, useRef, useState } from "react";
+import Sign_up from "../Components/Sign_up";
 
 const Registration_Page = () => {
   const [login_state, setlogin_state] = useState(true);
