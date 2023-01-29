@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
-import Sign_up from "../Components/Sign_up";
+import { redirect } from "react-router-dom";
 
-const Registration_Page = () => {
-  const [login_state, setlogin_state] = useState(true);
+import Sign_up from "../Components/Sign_up";
+import jwt_decode from "jwt-decode";
+import { Private_Route } from "../Components/Private_Route";
+
+const Registration_Page = (props) => {
+  const [login_state, setlogin_state] = useState(false);
   const usernameRef = useRef();
   const passwordRef = useRef();
-
   let change_login_state = async (event) => {
     event.preventDefault();
     let response = await fetch("http://127.0.0.1:8000/api/token/", {
@@ -20,7 +23,11 @@ const Registration_Page = () => {
     });
     let data = await response.json();
     if (response.status === 200) {
-      console.log(data.access);
+      console.log(jwt_decode(data.access));
+      redirect("/BuildByBlock");
+      localStorage.setItem("authTokens", "true");
+
+      props.xy(true);
     } else {
       console.log("Taha");
     }
@@ -39,37 +46,35 @@ const Registration_Page = () => {
           <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
             <form>
               <div className="flex items-center my-2 before:flex-1 before:border-t before:border-black before:mt-0.5 after:flex-1 after:border-t after:border-black after:mt-0.5"></div>
-              {login_state ? (
-                <div className="">
-                  <div className="Sign_in grid text-2xl text-black text-center mb-2">
-                    Sign In
-                  </div>
-                  {/* Email input */}
-                  <div className="mb-6">
-                    <input
-                      ref={usernameRef}
-                      type="email"
-                      className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                      name="username"
-                      id="username"
-                      placeholder="Email address"
-                    />
-                  </div>
-                  {/* Password input */}
-                  <div className="mb-6">
-                    <input
-                      ref={passwordRef}
-                      type="password"
-                      name="password"
-                      className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                      id="password"
-                      placeholder="Password"
-                    />
-                  </div>
+
+              <div className="">
+                <div className="Sign_in grid text-2xl text-black text-center mb-2">
+                  Sign In
                 </div>
-              ) : (
-                <Sign_up />
-              )}
+                {/* Email input */}
+                <div className="mb-6">
+                  <input
+                    ref={usernameRef}
+                    type="email"
+                    className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    name="username"
+                    id="username"
+                    placeholder="Email address"
+                  />
+                </div>
+                {/* Password input */}
+                <div className="mb-6">
+                  <input
+                    ref={passwordRef}
+                    type="password"
+                    name="password"
+                    className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    id="password"
+                    placeholder="Password"
+                  />
+                </div>
+              </div>
+
               <div className="flex justify-between items-center mb-6">
                 <div className="form-group form-check">
                   <input
@@ -94,7 +99,8 @@ const Registration_Page = () => {
                   className="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                   onClick={change_login_state}
                 >
-                  {login_state ? "Login" : "Sign UP"}{" "}
+                  {"Login"}
+                  {/* {login_state ? "Login" : "Sign UP"}{" "} */}
                 </button>
                 <p className="text-sm font-semibold mt-2 pt-1 mb-0">
                   {login_state
