@@ -6,7 +6,7 @@ import Html5 from "./Animations/Html5";
 import React_logo from "./Animations/React_logo";
 const Technologies = () => {
   return (
-    <div className="overflow-hidden">
+    <div id="TechnologiesUsed" className="overflow-hidden">
       <div className="text-[#A5AAB9] text-center pl-3 text-5xl mt-24">
         Technologies Used
       </div>

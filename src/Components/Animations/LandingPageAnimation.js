@@ -2,7 +2,7 @@ import React from "react";
 import "./LandingPageAnimation.css";
 const LandingPageAnimation = () => {
   return (
-    <div className="container">
+    <div className="container z-20">
       <svg
         version="1.1"
         id="Layer_1"

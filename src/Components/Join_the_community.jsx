@@ -8,24 +8,28 @@ const Join_the_community = () => {
       <div className="text-[#A5AAB9] text-center pl-3 text-5xl mt-24">
         Join The Community
       </div>
-      <div className="flex justify-center text-white text-2xl">
+      <div className="flex justify-center text-white text-2xl mt-6">
         <div className="Github">
           <div className="text-center text-2xl">Github</div>
-          <div className="">
+          <a href="https://github.com/TahaMahmood27" target="_blank">
             <Github />
-          </div>
+          </a>
         </div>
         <div className="Email">
           <div className="text-center">Email</div>
-          <div>
+          <a href="mailto:TahaMahmood.Q@gmail.com">
             <Email />
-          </div>
+          </a>
         </div>
         <div className="Twitter">
           <div className="text-center">Twitter</div>
-          <div className="overflow-hidden">
+          <a
+            className="overflow-hidden"
+            href="https://twitter.com/TahaMahmood27"
+            target="_blank"
+          >
             <Twitter />
-          </div>
+          </a>
         </div>
       </div>
     </div>

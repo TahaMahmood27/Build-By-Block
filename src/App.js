@@ -8,11 +8,11 @@ import AddBlog from "./Components/AddBlog";
 import { Not_found } from "./Components/Not_found";
 import { useEffect, useState } from "react";
 import { redirect } from "react-router-dom";
+import jwt_decode from "jwt-decode";
 function App() {
   const [authenticated, setauthenticated] = useState(false);
-  console.log(JSON.parse(localStorage.getItem("authTokens")).refresh);
   useEffect(() => {
-    if (localStorage.getItem("authTokens.access") === "true") {
+    if (jwt_decode(localStorage.getItem("authTokens"))) {
       setauthenticated(true);
     }
   }, [authenticated]);
@@ -29,7 +29,7 @@ function App() {
           </Route>
         ) : (
           () => {
-            return redirect("/BuildByBlock");
+            redirect("/BuildByBlock");
           }
         )}
         <Route path="*" element={<Not_found />}></Route>
