@@ -9,7 +9,7 @@ const Problem_Statement = () => {
       </div>
 
       <div className=" pl-5 grid grid-cols-2 mt-4 text-[#A5AAB9] text-md mx-[10%] w-[80%] items-center  bg-gradient-to-tr from-[#2944AB] to-[#0A0F2D] bg-gradient-to-r rounded-2xl ">
-        <div className=" h-min">
+        <div className="h-min">
           <p>
             Being the 6th largest country in terms of population. Pakistan lacks
             a basic online structure for land records and data manage- ment. Out

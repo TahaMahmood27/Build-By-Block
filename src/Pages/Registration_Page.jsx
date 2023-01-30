@@ -23,9 +23,9 @@ const Registration_Page = (props) => {
     });
     let data = await response.json();
     if (response.status === 200) {
-      // console.log(jwt_decode(data.access));
+      console.log(jwt_decode(data.access));
       localStorage.setItem("authTokens", JSON.stringify(data));
-      return redirect("/BuildByBlock");
+      return redirect("/");
     } else {
       console.log("Taha");
     }

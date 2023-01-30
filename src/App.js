@@ -29,7 +29,7 @@ function App() {
           </Route>
         ) : (
           () => {
-            redirect("/BuildByBlock");
+            return redirect("/BuildByBlock");
           }
         )}
         <Route path="*" element={<Not_found />}></Route>
