@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
-import { use } from "react-router-dom";
 import { redirect } from "react-router-dom";
 import Sign_up from "../Components/Sign_up";
 import jwt_decode from "jwt-decode";
-import { Private_Route } from "../Components/Private_Route";
 
 const Registration_Page = (props) => {
   const [login_state, setlogin_state] = useState(false);
+  const [authTokens, setAuthTokens] = useState("");
   const usernameRef = useRef();
   const passwordRef = useRef();
+
   let change_login_state = async (event) => {
     event.preventDefault();
     let response = await fetch("http://127.0.0.1:8000/api/token/", {
@@ -23,15 +23,43 @@ const Registration_Page = (props) => {
     });
     let data = await response.json();
     if (response.status === 200) {
-      console.log(jwt_decode(data.access));
-      localStorage.setItem("authTokens", "true");
+      // console.log(jwt_decode(data.access));
+      localStorage.setItem("authTokens", JSON.stringify(data));
       return redirect("/BuildByBlock");
-
-      // props.xy(true);
     } else {
       console.log("Taha");
     }
   };
+
+  let updateToken = async () => {
+    let response = await fetch("http://127.0.0.1:8000/api/token/refresh/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        refresh: JSON.parse(localStorage.getItem("authTokens")).refresh,
+      }),
+    });
+
+    let data = await response.json();
+
+    if (response.status === 200) {
+      setAuthTokens(data);
+      localStorage.setItem("authTokens", JSON.stringify(data));
+    } else {
+      console.log("ttt");
+    }
+  };
+  useEffect(() => {
+    let fourMinutes = 1000 * 60 * 4;
+
+    let interval = setInterval(() => {
+      updateToken();
+    }, fourMinutes);
+    return () => clearInterval(interval);
+  }, [authTokens]);
+
   return (
     <section className="h-screen bg-bue">
       <div className="px-6 h-full text-gray-800">

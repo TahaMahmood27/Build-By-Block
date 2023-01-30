@@ -10,10 +10,9 @@ import { useEffect, useState } from "react";
 import { redirect } from "react-router-dom";
 function App() {
   const [authenticated, setauthenticated] = useState(false);
-  console.log(localStorage.getItem("authTokens"));
-
+  console.log(JSON.parse(localStorage.getItem("authTokens")).refresh);
   useEffect(() => {
-    if (localStorage.getItem("authTokens") === "true") {
+    if (localStorage.getItem("authTokens.access") === "true") {
       setauthenticated(true);
     }
   }, [authenticated]);
