@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import { use } from "react-router-dom";
 import { redirect } from "react-router-dom";
-
 import Sign_up from "../Components/Sign_up";
 import jwt_decode from "jwt-decode";
 import { Private_Route } from "../Components/Private_Route";
@@ -24,10 +24,10 @@ const Registration_Page = (props) => {
     let data = await response.json();
     if (response.status === 200) {
       console.log(jwt_decode(data.access));
-      redirect("/BuildByBlock");
       localStorage.setItem("authTokens", "true");
+      return redirect("/BuildByBlock");
 
-      props.xy(true);
+      // props.xy(true);
     } else {
       console.log("Taha");
     }

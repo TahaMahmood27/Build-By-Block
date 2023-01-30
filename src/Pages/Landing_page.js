@@ -3,6 +3,7 @@ import Join_the_community from "../Components/Join_the_community.jsx";
 import Problem_Statement from "../Components/Problem_Statement";
 import Technologies from "../Components/Technologies.jsx";
 import LandingPageAnimation from "../Components/Animations/LandingPageAnimation.js";
+import { Link } from "react-router-dom";
 const Landing_page = () => {
   return (
     <div className="bg-background_2 scrollbar scrollbar-thumb-black scrollbar-track-white">
@@ -13,14 +14,14 @@ const Landing_page = () => {
 
         <div className="header h-10 text-white flex justify-center">
           <div className="flex pt-1 gap-x-10">
-            <a href="#top">Home</a>
+            <Link to="/Account_Page">Log In</Link>
+            <a href="www.google.com" className="">
+              Problem Statement
+            </a>
             <a href="https://www.google.com" className="">
               Our Products
             </a>
-            <a href="www.google.com" className="">
-              How it works
-            </a>
-            <a href="www.google.com">Contact us</a>
+            <a href="www.google.com">Technologies Used</a>
           </div>
         </div>
 
@@ -37,16 +38,16 @@ const Landing_page = () => {
               Tuesday morning, Wednesday morning, or any other morning during
               the week.
             </div>
-            <div className="button text-white">
+            <div className="button text-white mt-2">
               <a href="./Registration_Page">
-                <button className="border-2 border-white rounded-xl pt-1 p-2 text-3xl">
+                <button className="border-2 border-white rounded-xl pt-1 p-2 text-xl">
                   Sign Up
                 </button>
               </a>
-              <button className="border-2 border-white mx-1 rounded-xl pt-1 p-2 text-3xl">
+              <button className="border-2 border-white mx-1 rounded-xl pt-1 p-2 text-xl">
                 Sign In
               </button>
-              <button className="border-2 border-white rounded-xl pt-1 p-2 text-3xl">
+              <button className="border-2 border-white rounded-xl pt-1 p-2 text-xl">
                 Vision
               </button>
             </div>
