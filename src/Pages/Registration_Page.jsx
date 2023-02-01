@@ -17,7 +17,7 @@ const Registration_Page = (props) => {
 
   useEffect(() => {
     if (xy) {
-      setauthenticated(true);
+      // setauthenticated(true);
       // window.location.href = "/BuildByBlock";
     }
   }, []);
