@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import Sign_up from "../Components/Sign_up";
-import Cookies from "universal-cookie";
-import jwt_decode from "jwt-decode";
 
 const Registration_Page = (props) => {
   const [login_state, setlogin_state] = useState(false);
@@ -10,9 +8,8 @@ const Registration_Page = (props) => {
   const passwordRef = useRef();
   const [data, setdata] = useState(null);
   const [wrongPass, setWrongPass] = useState(false);
-
-  const cookie_Auth = new Cookies();
-
+  // fetching
+  console.log(document.log);
   let change_login_state = async (event) => {
     event.preventDefault();
     let response = await fetch("http://127.0.0.1:8000/api/token/", {
@@ -28,13 +25,9 @@ const Registration_Page = (props) => {
     let data = await response.json();
     if (response.status === 200) {
       setdata(data);
-      cookie_Auth.set("Access", JSON.stringify(data.access), [5 * 60]);
-      cookie_Auth.set("Refresh", JSON.stringify(data.refresh));
-      console.log(jwt_decode(data.access));
-
       localStorage.setItem("authTokens", JSON.stringify(data));
       setWrongPass(false);
-      // window.location.href = "/BuildByBlock";
+      window.location.href = "/BuildByBlock";
     } else {
       setWrongPass(true);
     }
@@ -55,7 +48,6 @@ const Registration_Page = (props) => {
 
     if (response.status === 200) {
       setAuthTokens(data);
-      cookie_Auth.set("Access", JSON.stringify(data.access), [5 * 60]);
       localStorage.setItem("authTokens", JSON.stringify(data));
     } else {
     }

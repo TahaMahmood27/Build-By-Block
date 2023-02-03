@@ -8,7 +8,7 @@ import AddBlog from "./Components/AddBlog";
 import { Not_found } from "./Components/Not_found";
 import { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
-import UserNotAuthenticated from "./Pages/UserNotAuthenticated";
+import JustUI from "./Pages/JustUI";
 
 function App() {
   const [authenticated, setauthenticated] = useState(false);
@@ -24,21 +24,22 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <Routes>
-        <Route path="" element={<Landing_page />}></Route>
+    <JustUI></JustUI>
+    // <div>
+    //   <Routes>
+    //     <Route path="" element={<Landing_page />}></Route>
 
-        <Route path="/Account_Page" element={<Registration_Page />} />
-        {authenticated && (
-          <Route path="/BuildByBlock">
-            <Route index element={<BlogLandingPage />} />
-            <Route path="BlogPage" element={<BlogPage />}></Route>
-            <Route path="AddBlog" element={<AddBlog />}></Route>
-          </Route>
-        )}
-        <Route path="*" element={<Not_found />}></Route>
-      </Routes>
-    </div>
+    //     <Route path="/Account_Page" element={<Registration_Page />} />
+    //     {authenticated && (
+    //       <Route path="/BuildByBlock">
+    //         <Route index element={<BlogLandingPage />} />
+    //         <Route path="BlogPage" element={<BlogPage />}></Route>
+    //         <Route path="AddBlog" element={<AddBlog />}></Route>
+    //       </Route>
+    //     )}
+    //     <Route path="*" element={<Not_found />}></Route>
+    //   </Routes>
+    // </div>
   );
 }
 
