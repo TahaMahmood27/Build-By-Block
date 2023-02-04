@@ -59,7 +59,7 @@ const Registration_Page = (props) => {
       updateToken();
     }, fourMinutes);
     return () => clearInterval(interval);
-  }, [authTokens]);
+  }, []);
 
   return (
     <section className="h-screen bg-bue">

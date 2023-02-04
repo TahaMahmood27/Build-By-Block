@@ -24,22 +24,21 @@ function App() {
   }, []);
 
   return (
-    <JustUI></JustUI>
-    // <div>
-    //   <Routes>
-    //     <Route path="" element={<Landing_page />}></Route>
+    <div>
+      <Routes>
+        <Route path="" element={<Landing_page />}></Route>
 
-    //     <Route path="/Account_Page" element={<Registration_Page />} />
-    //     {authenticated && (
-    //       <Route path="/BuildByBlock">
-    //         <Route index element={<BlogLandingPage />} />
-    //         <Route path="BlogPage" element={<BlogPage />}></Route>
-    //         <Route path="AddBlog" element={<AddBlog />}></Route>
-    //       </Route>
-    //     )}
-    //     <Route path="*" element={<Not_found />}></Route>
-    //   </Routes>
-    // </div>
+        <Route path="/Account_Page" element={<Registration_Page />} />
+        {authenticated && (
+          <Route path="/BuildByBlock">
+            <Route index element={<JustUI />} />
+            <Route path="BlogPage" element={<BlogPage />}></Route>
+            <Route path="AddBlog" element={<AddBlog />}></Route>
+          </Route>
+        )}
+        <Route path="*" element={<Not_found />}></Route>
+      </Routes>
+    </div>
   );
 }
 
