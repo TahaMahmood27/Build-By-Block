@@ -37,7 +37,7 @@ const JustUI = () => {
   }, []);
   return (
     <div className="">
-      <div className="grid grid-cols-12 ">
+      <div className="grid grid-cols-12">
         <div className="col-span-1 border-r border-[#d9d9d9] flex justify-center sticky top-0">
           <div className="sticky top-1">
             <div className="flex justify-start">
@@ -73,13 +73,13 @@ const JustUI = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-9 mx-[2.5%]">
+        <div className="col-span-9 mx-[2.5%] pb-12">
           <input
             type="text"
             placeholder="Search.."
             className="Search_bar col-span-2 rounded-full h-[50px] w-[300px] pl-6 ml-8 mt-8 border border-[#d9d9d9]"
           ></input>
-          <hr className="border border-[#d9d9d9] mt-6 w-[95%]"></hr>
+          <hr className="border border-[#d9d9d9] mt-6 w-[100%]"></hr>
           <div className="text-4xl font-medium mt-8">Build By Block</div>
           <div className="text-md">
             Build By Block is used to eliminate the problem of fraudulent
@@ -136,7 +136,7 @@ const JustUI = () => {
               </div>
             </button>
           </div>
-          <hr className="mt-4 mx-2"></hr>
+          <hr className="mt-4 mx-2 "></hr>
           <div className="mt-6 mx-2">
             <p className="font-medium text-2xl ">Continue reading</p>
             <img
@@ -144,7 +144,7 @@ const JustUI = () => {
               src="./blog.jpeg"
               alt="blog_picture"
             />
-            <p className="font-sm  text-lg">{blogdatax[0].title}</p>
+            <p className="font-sm mt-2 text-lg">{blogdatax[0].title}</p>
             <p className="text-xs">
               {blogdatax[0].description.substring(0, 200)}
             </p>

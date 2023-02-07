@@ -34,8 +34,10 @@ function App() {
             <Route index element={<JustUI />} />
             <Route path="BlogPage" element={<BlogPage />}></Route>
             <Route path="AddBlog" element={<AddBlog />}></Route>
+            <Route path="xyz" element={<BlogLandingPage />}></Route>
           </Route>
         )}
+
         <Route path="*" element={<Not_found />}></Route>
       </Routes>
     </div>
