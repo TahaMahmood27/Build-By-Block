@@ -23,6 +23,7 @@ const Registration_Page = (props) => {
       }),
     });
     let data = await response.json();
+    console.log(data);
     if (response.status === 200) {
       setdata(data);
       localStorage.setItem("authTokens", JSON.stringify(data));
