@@ -1,21 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import "./BlogPage.css";
+import { useParams } from "react-router-dom";
 const BlogPage = () => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [blogData, setBlogData] = useState([]);
+
+  const { blog_ID } = useParams();
+
   function fetchdata() {
     fetch("http://127.0.0.1:8000/api/Blog/")
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        setBlogData(data);
       });
   }
   useEffect(() => {
     fetchdata();
+    myCallback();
+  }, [fetchdata]);
+
+  const myCallback = useCallback(() => {
+    for (let i = 0; i < blogData.length; i++) {
+      if (blogData[i].id == blog_ID) {
+        setDescription(blogData[i].description);
+        setTitle(blogData[i].topic_Heading);
+      }
+    }
   }, []);
+  // console.log(title);
+  // console.log(description);
   return (
     <div>
       <Header />
@@ -25,7 +44,7 @@ const BlogPage = () => {
           <div class="content">
             <div class="poster">
               <div class="poster-title">
-                <h1> Article template </h1>
+                <h1> {title} </h1>
                 <div class="line"></div>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.

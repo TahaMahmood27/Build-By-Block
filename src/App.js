@@ -32,7 +32,7 @@ function App() {
         {authenticated && (
           <Route path="/BuildByBlock">
             <Route index element={<BlogLandingPage />} />
-            <Route path="BlogPage/:BlogID" element={<BlogPage />}></Route>
+            <Route path="BlogPage/:blog_ID" element={<BlogPage />}></Route>
             <Route path="AddBlog" element={<AddBlog />}></Route>
             <Route
               path="DocumentUploading"
