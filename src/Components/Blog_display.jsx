@@ -4,7 +4,7 @@ const Blog_display = (props) => {
   return (
     <div className="flex justify-start mt-6">
       <img
-        className="h-[250px] rounded-xl "
+        className="h-[250px] rounded-xl"
         src="./blog.jpeg"
         alt="blog_picture"
       />

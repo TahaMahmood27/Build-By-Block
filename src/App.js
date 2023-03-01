@@ -1,5 +1,4 @@
 import "./App.css";
-import BlogLandingPage from "./Pages/BlogLandingPage";
 import Landing_page from "./Pages/Landing_page";
 import Registration_Page from "./Pages/Registration_Page";
 import BlogPage from "./Pages/BlogPage";
@@ -8,7 +7,8 @@ import AddBlog from "./Components/AddBlog";
 import { Not_found } from "./Components/Not_found";
 import { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
-import JustUI from "./Pages/JustUI";
+import BlogLandingPage from "./Pages/BlogLandingPage";
+import Document_Uploading from "./Components/Document_Uploading";
 
 function App() {
   const [authenticated, setauthenticated] = useState(false);
@@ -31,10 +31,13 @@ function App() {
         <Route path="/Account_Page" element={<Registration_Page />} />
         {authenticated && (
           <Route path="/BuildByBlock">
-            <Route index element={<JustUI />} />
-            <Route path="BlogPage" element={<BlogPage />}></Route>
+            <Route index element={<BlogLandingPage />} />
+            <Route path="BlogPage/:BlogID" element={<BlogPage />}></Route>
             <Route path="AddBlog" element={<AddBlog />}></Route>
-            <Route path="xyz" element={<BlogLandingPage />}></Route>
+            <Route
+              path="DocumentUploading"
+              element={<Document_Uploading />}
+            ></Route>
           </Route>
         )}
 

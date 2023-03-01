@@ -1,8 +1,21 @@
 import React from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import { useEffect } from "react";
 import "./BlogPage.css";
 const BlogPage = () => {
+  function fetchdata() {
+    fetch("http://127.0.0.1:8000/api/Blog/")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      });
+  }
+  useEffect(() => {
+    fetchdata();
+  }, []);
   return (
     <div>
       <Header />
