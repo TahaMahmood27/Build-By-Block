@@ -4,37 +4,25 @@ import Footer from "../Components/Footer";
 import { useEffect, useCallback } from "react";
 import "./BlogPage.css";
 import { useParams } from "react-router-dom";
+import useSWR from "swr";
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
 const BlogPage = () => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [blogData, setBlogData] = useState([]);
+  const { data, error, isLoading } = useSWR(
+    "http://127.0.0.1:8000/api/Blog/",
+    fetcher
+  );
+
+  useEffect(() => {
+    if (!data) return;
+    const tmpData = data.filter((d) => d.id == blog_ID);
+    setBlogData(tmpData[0]);
+  }, [data]);
+
+  const [blogData, setBlogData] = useState(null);
 
   const { blog_ID } = useParams();
 
-  function fetchdata() {
-    fetch("http://127.0.0.1:8000/api/Blog/")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setBlogData(data);
-      });
-  }
-  useEffect(() => {
-    fetchdata();
-    myCallback();
-  }, [fetchdata]);
-
-  const myCallback = useCallback(() => {
-    for (let i = 0; i < blogData.length; i++) {
-      if (blogData[i].id == blog_ID) {
-        setDescription(blogData[i].description);
-        setTitle(blogData[i].topic_Heading);
-      }
-    }
-  }, []);
-  // console.log(title);
-  // console.log(description);
   return (
     <div>
       <Header />
@@ -44,7 +32,7 @@ const BlogPage = () => {
           <div class="content">
             <div class="poster">
               <div class="poster-title">
-                <h1> {title} </h1>
+                <h1> {blogData?.topic_Heading} </h1>
                 <div class="line"></div>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
