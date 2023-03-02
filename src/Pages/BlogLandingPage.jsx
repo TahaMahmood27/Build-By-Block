@@ -37,43 +37,47 @@ const JustUI = () => {
   }, []);
   return (
     <div className="">
-      <div className="grid grid-cols-12">
-        <div className="col-span-1 border-r border-[#d9d9d9] flex justify-center sticky top-0">
-          <div className="sticky top-1">
-            <div className="flex justify-start">
-              <img src="./Logo.png" className="h-[45px]"></img>
-              <div className="text-sm mt-1 font-medium">Build By Block</div>
-            </div>
-
-            <div>
-              <div className="flex justify-start mt-24 pl-2">
-                <img src="./login.svg" className="h-[40px] "></img>
-                <div className="text-sm flex items-center font-medium pl-1">
-                  Sign In
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-3">
-              <div className="flex justify-start pl-2">
-                <img src="./signout.svg" className="h-[40px] "></img>
-                <div className="text-sm flex items-center font-medium pl-1">
-                  Sign Out
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-3">
-              <div className="flex justify-start pl-3">
-                <img src="./blockchain.svg" className="h-[40px]"></img>
-                <div className="text-sm flex items-center font-medium pl-1">
-                  Block-Chain
-                </div>
-              </div>
+      <div className="flex justify-start mt-1">
+        <div>
+          <div className="flex justify-start  pl-2">
+            <img src="./logo.png" className="h-[40px] "></img>
+            <div className="text-sm flex items-center font-medium pl-1">
+              Build By Block
             </div>
           </div>
         </div>
-        <div className="col-span-9 mx-[2.5%] pb-12">
+
+        <div className="ml-[60%]">
+          <div className="flex justify-start  pl-2">
+            <img src="./login.svg" className="h-[35px] "></img>
+            <div className="text-sm flex items-center font-medium pl-1">
+              Sign In
+            </div>
+          </div>
+        </div>
+
+        <div className="">
+          <div className="flex justify-start pl-2">
+            <img src="./signout.svg" className="h-[35px] "></img>
+            <div className="text-sm flex items-center font-medium pl-1">
+              Sign Out
+            </div>
+          </div>
+        </div>
+
+        <div className="">
+          <div className="flex justify-start pl-3">
+            <img src="./blockchain.svg" className="h-[35px]"></img>
+            <div className="text-sm flex items-center font-medium pl-1">
+              Block-Chain
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr className="border border-[#d9d9d9] mt-2 w-[95%] ml-[2.5%]"></hr>
+
+      <div className="grid grid-cols-12">
+        <div className="col-span-10 mx-[2.5%] pb-12">
           <input
             type="text"
             placeholder="Search.."
