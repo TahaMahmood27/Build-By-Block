@@ -17,6 +17,7 @@ const BlogPage = () => {
     if (!data) return;
     const tmpData = data.filter((d) => d.id == blog_ID);
     setBlogData(tmpData[0]);
+    console.log(tmpData[0]);
   }, [data]);
 
   const [blogData, setBlogData] = useState(null);
@@ -34,11 +35,6 @@ const BlogPage = () => {
               <div class="poster-title">
                 <h1> {blogData?.topic_Heading} </h1>
                 <div class="line"></div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente
-                  in maiores quasi saepe quas quisquam obcaecati odio{" "}
-                </p>
               </div>
             </div>
 

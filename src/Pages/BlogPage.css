@@ -35,10 +35,11 @@
   width: 40%;
 }
 .content .poster .poster-title h1 {
-  font-size: 40px;
+  font-size: 35px;
   color: white;
   font-weight: 300;
-  margin: 20px 0;
+  margin: 25px 0;
+  height: auto;
 }
 .content .poster .poster-title .line {
   background-color: #b4c4c5;
@@ -172,7 +173,7 @@
     height: 120px;
   }
   .content .poster {
-    height: 250px;
+    height: 300px;
   }
   .content .poster .poster-title h1 {
     font-size: 25px;
