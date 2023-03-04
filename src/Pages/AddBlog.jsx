@@ -3,9 +3,7 @@ import Header from "../Components/Header";
 
 const AddBlog = () => {
   const [title, setTitle] = useState("");
-  const [subject, setSubject] = useState("");
   const [description, setDescription] = useState("");
-  const [dataList, setDataList] = useState([]);
 
   let postData = async (event) => {
     event.preventDefault();
@@ -20,6 +18,8 @@ const AddBlog = () => {
         auther: 3,
       }),
     });
+    setTitle("");
+    setDescription("");
   };
 
   return (
@@ -49,16 +49,7 @@ const AddBlog = () => {
                       className="focus:outline-none pl-2.5 mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-gray-200 focus:bg-gray-100 focus:ring-0"
                     />
                   </div>
-                  <div className="mt-7">
-                    <input
-                      value={subject}
-                      onChange={(event) => {
-                        setSubject(event.target.value);
-                      }}
-                      placeholder="Subject"
-                      className="focus:outline-none pl-2.5 mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-gray-200 focus:bg-gray-100 focus:ring-0"
-                    />
-                  </div>
+
                   <div className="mt-7">
                     <textarea
                       value={description}
