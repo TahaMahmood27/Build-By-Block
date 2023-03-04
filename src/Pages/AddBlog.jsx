@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Form_animation from "../Components/Animations/Form_animation";
+import React, { useState, useRef } from "react";
 import Header from "../Components/Header";
 
 const AddBlog = () => {
@@ -8,12 +7,19 @@ const AddBlog = () => {
   const [description, setDescription] = useState("");
   const [dataList, setDataList] = useState([]);
 
-  const handleSubmit = (event) => {
+  let postData = async (event) => {
     event.preventDefault();
-    setDataList([...dataList, { title, subject, description }]);
-    setTitle("");
-    setSubject("");
-    setDescription("");
+    let response = await fetch("http://127.0.0.1:8000/api/Blog/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        topic_Heading: title,
+        description: description,
+        auther: 3,
+      }),
+    });
   };
 
   return (
@@ -35,19 +41,40 @@ const AddBlog = () => {
                 <form method="#" action="#" className="mt-10">
                   <div>
                     <input
+                      value={title}
+                      onChange={(event) => {
+                        setTitle(event.target.value);
+                      }}
                       placeholder="Title"
                       className="focus:outline-none pl-2.5 mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-gray-200 focus:bg-gray-100 focus:ring-0"
                     />
                   </div>
                   <div className="mt-7">
+                    <input
+                      value={subject}
+                      onChange={(event) => {
+                        setSubject(event.target.value);
+                      }}
+                      placeholder="Subject"
+                      className="focus:outline-none pl-2.5 mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-gray-200 focus:bg-gray-100 focus:ring-0"
+                    />
+                  </div>
+                  <div className="mt-7">
                     <textarea
+                      value={description}
+                      onChange={(event) => {
+                        setDescription(event.target.value);
+                      }}
                       placeholder="Description"
                       className="focus:outline-none pt-2 pl-2.5 mt-1 block w-full border-none bg-gray-100 h-36 rounded-xl shadow-lg hover:bg-gray-200 focus:bg-gray-100 focus:ring-0"
                     />
                   </div>
 
                   <div className="mt-7">
-                    <button className="bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105">
+                    <button
+                      onClick={postData}
+                      className="bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105"
+                    >
                       Submit
                     </button>
                   </div>
