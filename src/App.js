@@ -9,7 +9,7 @@ import { Not_found } from "./Components/Not_found";
 import { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
 import BlogLandingPage from "./Pages/BlogLandingPage";
-import Document_Uploading from "./Components/Document_Uploading";
+import Document_Uploading from "./Pages/Document_Uploading";
 import Testing from "./Pages/Testing";
 
 function App() {

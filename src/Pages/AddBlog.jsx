@@ -1,10 +1,11 @@
 import React, { useState, useRef } from "react";
 import Header from "../Components/Header";
-
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { storage } from "../firebase";
 const AddBlog = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-
+  const [image, setImage] = useState(null);
   let postData = async (event) => {
     event.preventDefault();
     let response = await fetch("http://127.0.0.1:8000/api/Blog/", {
@@ -20,6 +21,12 @@ const AddBlog = () => {
     });
     setTitle("");
     setDescription("");
+    let data = await response.json();
+    if (response.status === 200 || image != null) {
+      const storageRef = ref(storage, "images/" + data.id);
+      const uploadTask = uploadBytes(storageRef, image);
+    } else {
+    }
   };
 
   return (
@@ -60,7 +67,15 @@ const AddBlog = () => {
                       className="focus:outline-none pt-2 pl-2.5 mt-1 block w-full border-none bg-gray-100 h-36 rounded-xl shadow-lg hover:bg-gray-200 focus:bg-gray-100 focus:ring-0"
                     />
                   </div>
-
+                  <input
+                    type="file"
+                    id="image"
+                    accept="image/*"
+                    className="mt-4"
+                    onChange={(event) => {
+                      setImage(event.target.files[0]);
+                    }}
+                  />
                   <div className="mt-7">
                     <button
                       onClick={postData}

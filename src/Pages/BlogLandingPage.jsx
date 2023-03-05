@@ -66,12 +66,14 @@ const JustUI = () => {
         </div>
 
         <div className="">
-          <div className="flex justify-start pl-3">
-            <img src="./blockchain.svg" className="h-[35px]"></img>
-            <div className="text-sm flex items-center font-medium pl-1">
-              Block-Chain
+          <Link to="/BuildByBlock/DocumentUploading">
+            <div className="flex justify-start pl-3">
+              <img src="./blockchain.svg" className="h-[35px]"></img>
+              <div className="text-sm flex items-center font-medium pl-1">
+                Block-Chain
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
       <hr className="border border-[#d9d9d9] mt-2 w-[95%] ml-[2.5%]"></hr>
@@ -135,12 +137,14 @@ const JustUI = () => {
           </div>
 
           <div className="mt-10 mx-2">
-            <button>
-              <ClickHere />
-              <div className="font-medium mt-[-20px]">
-                Click HERE If You Want To Use Our BlockChain Facility!!
-              </div>
-            </button>
+            <Link to="/BuildByBlock/DocumentUploading">
+              <button>
+                <ClickHere />
+                <div className="font-medium mt-[-20px]">
+                  Click HERE If You Want To Use Our BlockChain Facility!!
+                </div>
+              </button>
+            </Link>
           </div>
           <hr className="mt-4 mx-2 "></hr>
           <div className="mt-6 mx-2">
