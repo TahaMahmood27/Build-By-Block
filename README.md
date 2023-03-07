@@ -1,15 +1,22 @@
-# Getting Started with Create React App
+Currenlty in Development | This is only the frontend 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Built By Block is a Web 3.0 website that aims to solve the problem of fraudulent documents by using blockchain to store Land Ownership Certificates. In addition, there is a blogging feature that allows users to stay updated on the latest news.
 
-## Available Scripts
+Technologies Used: React, Django, Tailwind, LottieFiles, Solididty 
+<img width="1420" alt="Screenshot 2023-03-06 at 12 54 19 AM" src="https://user-images.githubusercontent.com/101132447/222982712-d0cb88cc-1354-4c3b-82cd-b2d13867448f.png">
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img width="1425" alt="Screenshot 2023-03-06 at 12 54 38 AM" src="https://user-images.githubusercontent.com/101132447/222982727-d9b0e976-7364-4cea-9560-3dbb3ee18314.png"><img width="1422" alt="Screenshot 2023-03-06 at 12 54 45 AM" src="https://user-images.githubusercontent.com/101132447/222982730-2f586b42-0b71-40f2-9b12-812664ec3252.png">
+<img width="1440" alt="Screenshot 2023-03-06 at 12 55 10 AM" src="https://user-images.githubusercontent.com/101132447/222982734-6f459dcb-f36d-4862-9b2a-2db9e7f38a9f.png"><img width="1436" alt="Screenshot 2023-03-06 at 12 55 59 AM" src="https://user-images.githubusercontent.com/101132447/222983227-1ffc9b3d-69ac-4461-a9d0-0ef3702ffc98.png">
+
+<img width="1434" alt="Screenshot 2023-03-06 at 12 55 17 AM" src="https://user-images.githubusercontent.com/101132447/222982738-53e94a20-3758-477f-8f74-5577bfc4f380.png">
+<img width="1430" alt="Screenshot 2023-03-06 at 12 55 26 AM" src="https://user-images.githubusercontent.com/101132447/222982740-a8056735-c006-46e1-bf35-7073a63eafc8.png">
+
+<img width="1436" alt="Screenshot 2023-03-06 at 12 55 59 AM" src="https://user-images.githubusercontent.com/101132447/222983233-520cb1ee-1721-4843-9645-b946617e807b.png">
+<img width="1430" alt="Screenshot 2023-03-06 at 12 56 06 AM" src="https://user-images.githubusercontent.com/101132447/222982728-d829ed59-b304-485e-a38c-43b92834dd32.png">
+<img width="1435" alt="Screenshot 2023-03-06 at 12 55 42 AM" src="https://user-images.githubusercontent.com/101132447/222983300-6abd4be0-517a-4f1d-bddd-0e8031a465ee.png">
+<img width="1440" alt="Screenshot 2023-03-06 at 1 08 55 AM" src="https://user-images.githubusercontent.com/101132447/222983312-41676212-8a74-4928-80dd-bd93a2777bbc.png">
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
