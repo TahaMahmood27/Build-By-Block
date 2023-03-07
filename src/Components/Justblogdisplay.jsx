@@ -1,6 +1,23 @@
 import React from "react";
+import { useEffect } from "react";
+import { listAll } from "firebase/storage";
+import { getDownloadURL } from "firebase/storage";
+import { storage } from "../firebase";
+import { ref } from "firebase/storage";
 
 const Justblogdisplay = (props) => {
+  const [imageUrls, setImageUrls] = React.useState([]);
+
+  useEffect(() => {
+    listAll(ref(storage, "images/")).then((response) => {
+      response.items.forEach((item) => {
+        getDownloadURL(item).then((url) => {
+          setImageUrls(url);
+          console.log(url);
+        });
+      });
+    });
+  }, []);
   return (
     <div>
       <img
