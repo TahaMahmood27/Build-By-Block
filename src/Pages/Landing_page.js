@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Landing_page = () => {
   return (
     <div className="bg-background_2 scrollbar scrollbar-thumb-black scrollbar-track-white">
-      <div className="relative overflow-hidden">
+      <div className="Mainrelative overflow-hidden">
         <div className="absolute blur-3xl opacity-[30%] bg-gradient-to-tr from-[#1F34E7] to-[#1FC3E7] bg-gradient-to-r -top-[250px] -right-[250px] w-[700px] h-[700px] rounded-full z-0"></div>
         <div className="absolute blur-3xl opacity-[30%] bg-gradient-to-tr from-[#1F34E7] to-[#1FC3E7] bg-gradient-to-r top-[800px] left-[350px] w-[200px] h-[200px] rounded-full z-10"></div>
         <div className="absolute blur-3xl opacity-[30%] bg-gradient-to-tr from-[#1F34E7] to-[#1FC3E7] bg-gradient-to-r top-[550px] -left-[100px] w-[300px] h-[300px] rounded-full z-10"></div>
@@ -29,11 +29,10 @@ const Landing_page = () => {
               BlockChain Web-app For Real Estate
             </div>
             <div className="text-lg text-[#A5AAB9]">
-              It was always the Monday mornings. It never seemed to happen on
-              Tuesday morning, Wednesday morning, or any other morning during
-              the week.
+              A Web Based Solution, Based on Blockchain to eliminate the problem
+              of fradulant land ownership certificates in Pakistan.
             </div>
-            <div className="button text-white mt-2 z-20">
+            <div className="button text-white mt-5 z-20">
               <a href="./Registration_Page " className="z-20">
                 <Link
                   to="/Account_Page"

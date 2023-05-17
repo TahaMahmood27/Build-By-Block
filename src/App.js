@@ -29,7 +29,6 @@ function App() {
     <div>
       <Routes>
         <Route path="" element={<Landing_page />}></Route>
-        <Route path="/Testing" element={<Testing />}></Route>"
         <Route path="/Account_Page" element={<Registration_Page />} />
         {authenticated && (
           <Route path="/BuildByBlock">

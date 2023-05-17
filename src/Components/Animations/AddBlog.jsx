@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Lottie from "react-lottie";
-import animationData from "../../Animation_Json/github.json";
-class Github extends Component {
+import animationData from "../../Animation_Json/addBlog.json";
+class AddBlog extends Component {
   render() {
     const defaultOptions = {
       loop: true,
@@ -10,10 +10,10 @@ class Github extends Component {
       renderer: "svg",
     };
     return (
-      <div className="mr-10">
-        <Lottie options={defaultOptions} height={400} width={400} />
+      <div className="ml-4">
+        <Lottie options={defaultOptions} height={200} />
       </div>
     );
   }
 }
-export default Github;
+export default AddBlog;

@@ -9,7 +9,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const BlogPage = () => {
   const { data, error, isLoading } = useSWR(
-    "http://127.0.0.1:8000/api/Blog/",
+    "http://13.54.165.249/api/blog/",
     fetcher
   );
 

@@ -8,7 +8,7 @@ const AddBlog = () => {
   const [image, setImage] = useState(null);
   let postData = async (event) => {
     event.preventDefault();
-    let response = await fetch("http://127.0.0.1:8000/api/Blog/", {
+    let response = await fetch("http://13.54.165.249/api/blog/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -16,15 +16,14 @@ const AddBlog = () => {
       body: JSON.stringify({
         topic_Heading: title,
         description: description,
-        auther: 3,
+        auther: 1,
       }),
     });
     setTitle("");
     setDescription("");
     let data = await response.json();
     if (response.status === 200 || image != null) {
-      const storageRef = ref(storage, "images/" + data.id);
-      const uploadTask = uploadBytes(storageRef, image);
+      console.log("Taha");
     } else {
     }
   };

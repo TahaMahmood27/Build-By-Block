@@ -5,6 +5,7 @@ import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
 import Justblogdisplay from "../Components/Justblogdisplay";
 import ClickHere from "../Components/Animations/ClickHere";
+import AddBlog from "../Components/Animations/AddBlog";
 
 const JustUI = () => {
   const [blogdatax, setblogdatax] = useState([
@@ -16,7 +17,7 @@ const JustUI = () => {
   ]);
 
   function fetchdata() {
-    fetch("http://127.0.0.1:8000/api/Blog/")
+    fetch("http://13.54.165.249/api/blog/")
       .then((response) => {
         return response.json();
       })
@@ -29,7 +30,7 @@ const JustUI = () => {
           };
         });
         setblogdatax(blogdata);
-        console.log(blogdata[0].id);
+        console.log(data);
       });
   }
   useEffect(() => {
@@ -80,11 +81,6 @@ const JustUI = () => {
 
       <div className="grid grid-cols-12">
         <div className="col-span-10 mx-[2.5%] pb-12">
-          <input
-            type="text"
-            placeholder="Search.."
-            className="Search_bar col-span-2 rounded-full h-[50px] w-[300px] pl-6 ml-8 mt-8 border border-[#d9d9d9]"
-          ></input>
           <hr className="border border-[#d9d9d9] mt-6 w-[100%]"></hr>
           <div className="text-4xl font-medium mt-8">Build By Block</div>
           <div className="text-md">
@@ -148,16 +144,10 @@ const JustUI = () => {
           </div>
           <hr className="mt-4 mx-2 "></hr>
           <div className="mt-6 mx-2">
-            <p className="font-medium text-2xl ">Continue reading</p>
-            <img
-              className="w-[100%] rounded-xl mt-2"
-              src="./blog.jpeg"
-              alt="blog_picture"
-            />
-            <p className="font-sm mt-2 text-lg">{blogdatax[0].title}</p>
-            <p className="text-xs">
-              {blogdatax[0].description.substring(0, 200)}
-            </p>
+            <p className="font-medium text-lg ">Want To Add Blog Click Here</p>
+            <Link to="/BuildByBlock/AddBlog">
+              <AddBlog />
+            </Link>
           </div>
         </div>
       </div>
