@@ -12,7 +12,7 @@ const Registration_Page = (props) => {
   console.log(document.log);
   let change_login_state = async (event) => {
     event.preventDefault();
-    let response = await fetch("http://127.0.0.1:8000/api/token/", {
+    let response = await fetch("http://13.54.165.249/api/token/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

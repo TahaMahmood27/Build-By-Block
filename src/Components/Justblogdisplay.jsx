@@ -26,7 +26,7 @@ const Justblogdisplay = (props) => {
         alt="blog_picture"
       />
       <div className="mt-2">
-        <div className="text-2xl h-16 overflow-hidden">{props.xy.title}</div>
+        <div className="text-2xl h-16  overflow-hidden">{props.xy.title}</div>
         <hr className="border border-[#d9d9d9] mt-2"></hr>
         <div className="text-sm h-[60px]  overflow-hidden">
           {props.xy.description.substring(0, 200)}

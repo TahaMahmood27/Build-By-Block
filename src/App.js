@@ -13,7 +13,7 @@ import Document_Uploading from "./Pages/Document_Uploading";
 import Testing from "./Pages/Testing";
 
 function App() {
-  const [authenticated, setauthenticated] = useState(false);
+  const [authenticated, setauthenticated] = useState(true);
   function authentication() {
     try {
       const getData = jwt_decode(localStorage.getItem("authTokens"));
